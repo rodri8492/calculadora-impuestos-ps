@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/36fc96d504.js" crossorigin="anonymous"></script>
+    <title>Calculadora de Impuestos PS Store</title>
+</head>
+<body id="body">
+    <header>
+        <nav>
+            <label for="checkbox-tema">
+                <div class="container-bubble">
+                    <div class="bubble" id="bubble"></div>
+                </div>
+                <i class="fa-solid fa-moon"></i>
+            </label>
+            <input type="checkbox" name="tema" id="checkbox-tema">
+        </nav>
+    </header>
+    <main class="main-container">
+        <article class="article-container">
+            <header>
+                <h3>Calculá el precio final de tu compra en la PS store</h3>
+            </header>
+            <main>
+                <section class="container-calculos">
+                    <header>
+                        <h4>Valor Dolar Tarjeta: <span id="span-dolar-tarjeta"></span></h4>
+                    </header>
+                    <main class="container-inputs">
+                        <input type="number" name="valor-de-la-compra" id="valor-compra" placeholder="Valor de la compra (USD)" min="0" step="0.01">
+                    </main>
+                    <footer class="container-inputs">
+                        <button onclick="calcularValorTotal()">Calcular</button>
+                    </footer>
+                </section>
+                <section class="container-detalles">
+                    <header>
+                        <h3>Valor final: <span class="color-verde" id="span-valor-total"></span></h3>
+                    </header>
+                    <main>
+                        <h4>Detalles:</h4>
+                        <ul>
+                            <li><b>Total sin Impuestos:</b> <span class="color-verde" id="span-sin-impuestos"></span></li>
+                            <li><b>Impuesto País:</b> <span class="color-verde" id="span-impuesto-pais"></span></li>
+                            <li><b>Impuesto a <br>las Ganancias:</b> <span class="color-verde" id="span-impuesto-ganancias"></span></li>
+                            <li><b>Impuesto por <br> Compras con Tarjeta:</b> <span class="color-verde" id="span-compras-tarjetas"></span></li>
+                        </ul>
+                    </main>
+                </section>
+            </main>
+            <footer>
+                <section class="container-info">
+                    <h3>¿Qué se toma en cuenta para calcular el valor final?</h3>
+                    <ul>
+                        <li><b>Impuesto País:</b> 30% del valor de la compra.</li>
+                        <li><b>Impuesto a las Ganancias:</b> 45% del valor de la compra.</li>
+                        <li><b>Impuesto por compras con tarjeta:</b> 25% del valor de la compra.</li>
+                    </ul>
+                    <h5>Recordá que el valor final es un aproximado, el mismo podría variar.</h5>
+                </section>
+            </footer>
+        </article>
+    </main>
+    <footer>
+        <p>&copy;2024 todos los derechos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
